@@ -1,6 +1,6 @@
 # Recommendation System for Carrefour eCommerce
 
-[NOTE! Project is ongoing. Please see the [https://github.com/ZahirAhmadChaudhry/Recommendation_Systems_Kaggle/blob/main/Presentation/Recommendation_systems_Kaggle.pdf](Presentation) for latest updates on the project]
+[NOTE! Project is ongoing. Please see the [Presentation](https://github.com/ZahirAhmadChaudhry/Recommendation_Systems_Kaggle/blob/main/Presentation/Recommendation_systems_Kaggle.pdf) for latest updates on the project]
 
 
 This repository chronicles an ongoing journey to build a highly effective recommendation system for predicting the first product a customer will repurchase on Carrefour’s eCommerce platform in 2024. Our starting point involved dissecting transaction records across 100,000+ customers, detailed product catalogs, and partially masked future purchases that serve as the validation and test targets. We began our work by constructing rudimentary baselines, such as a global popularity ranking that simply tallied the most frequently purchased items, and a recency-based model that prioritized items acquired in the latest transactions. Although these methods offered a quick proof of concept, they struggled to capture the intricacies of user-specific buying patterns.

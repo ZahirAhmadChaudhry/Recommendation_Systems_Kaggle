@@ -1,5 +1,8 @@
 # Recommendation System for Carrefour eCommerce
 
+[NOTE! Project is ongoing. Please see the [https://github.com/ZahirAhmadChaudhry/Recommendation_Systems_Kaggle/blob/main/Presentation/Recommendation_systems_Kaggle.pdf](Presentation) for latest updates on the project]
+
+
 This repository chronicles an ongoing journey to build a highly effective recommendation system for predicting the first product a customer will repurchase on Carrefour’s eCommerce platform in 2024. Our starting point involved dissecting transaction records across 100,000+ customers, detailed product catalogs, and partially masked future purchases that serve as the validation and test targets. We began our work by constructing rudimentary baselines, such as a global popularity ranking that simply tallied the most frequently purchased items, and a recency-based model that prioritized items acquired in the latest transactions. Although these methods offered a quick proof of concept, they struggled to capture the intricacies of user-specific buying patterns.
 
 We then introduced a time-weighted frequency mechanism that exponentially down-weighted older purchases while giving prominence to more recent transactions. This approach helped us achieve an intermediate performance, and it laid the foundation for a family of hybrid models that combined recency, frequency, and seasonality. In our hybrid experiments, we also recognized that customers are not homogeneous; some shop very frequently, whereas others make only occasional purchases. Consequently, we segmented our customers into high-, medium-, and low-frequency tiers, introducing different weight distributions for recency and frequency signals in each segment. This segmentation yielded a promising Hitrate@10 in the range of 0.36, far surpassing the earlier baselines.
@@ -10,13 +13,7 @@ In parallel, we introduced a two-tower architecture, where user and item embeddi
 
 Currently, we continue to refine these neural architectures by fine-tuning hyperparameters such as learning rate schedules, batch sizes, and layer dimensions. We have also introduced standardized best practices, such as early stopping and model regularization, to safeguard against overfitting on smaller training subsets. To date, we have validated our pipeline’s integrity on roughly 10% of the complete dataset, and early results suggest further gains can be achieved as we move to larger samples. Our plan involves completing the full integration of Neural Graph Collaborative Filtering, scaling up the two-tower approach, and systematically benchmarking both methods against ensemble-based models such as GBM, XGBoost, and LightGBM. Although this project remains a work in progress, it underscores the combined strengths of graph-based embeddings, negative sampling, and robust data engineering in tackling real-world recommender challenges at scale.
 
-For more details or inquiries, please refer to the [references](#references) below and consult our accompanying presentation. Note that data files and sensitive code have been withheld or encrypted in accordance with confidentiality agreements.
-
 ## References
 
-- University of Bordeaux, Data Challenges: [https://www.u-bordeaux.fr/Recherche/Accueil-chercheurs](https://www.u-bordeaux.fr/Recherche/Accueil-chercheurs)  
-- Carrefour Analytics Factory (Press Release): [https://www.carrefour.com/en/group/our-activities/carrefour-analytics](https://www.carrefour.com/en/group/our-activities/carrefour-analytics)  
 - Wang, Xiang, et al. "Neural graph collaborative filtering." *SIGIR* (2019)  
 - Smirnov, N. "Table for estimating the goodness of fit of empirical distributions." *The Annals of Mathematical Statistics* (1948)
-
-Please be mindful that while the conceptual aspects and high-level code structures have been openly shared, the proprietary datasets and certain implementation details remain private. If you have any suggestions or wish to collaborate, feel free to reach out via issues or pull requests. Thank you for visiting!  

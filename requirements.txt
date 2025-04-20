@@ -1,0 +1,40 @@
+# Core data processing and analysis
+numpy==1.23.5
+pandas==1.5.3
+scikit-learn==1.2.2
+scipy==1.10.1
+tqdm==4.65.0
+
+# Visualization
+matplotlib==3.7.1
+seaborn==0.12.2
+plotly==5.14.1
+
+# Deep learning
+torch==1.13.1
+torch-scatter==2.1.0
+torch-sparse==0.6.16
+torch-geometric==2.3.0
+
+# Gradient boosting
+lightgbm==3.3.5
+xgboost==1.7.5
+
+# Utilities
+ipykernel==6.23.0
+ipython==8.13.1
+notebook==6.5.4
+jupyterlab==4.0.0
+
+# File formats
+pyarrow==11.0.0
+fastparquet==2023.4.0
+
+# Memory optimization
+psutil==5.9.5
+
+# Optional: visualization in notebooks
+ipywidgets==8.0.6
+
+# Statistical testing
+statsmodels==0.13.5

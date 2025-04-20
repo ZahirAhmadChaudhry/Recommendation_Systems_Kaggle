@@ -77,6 +77,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*/.ipynb_checkpoints/*
 
 # IPython
 profile_default/
@@ -169,3 +170,48 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Data files (due to competition policy)
+*.csv
+*.csv.gz
+*.parquet
+*.tsv
+*.hdf5
+*.h5
+*.pkl
+*.pickle
+
+# Keep the Enhanced_data directory structure but not the actual files
+!1_Statistical_Approches/Enhanced_data/.gitkeep
+
+# Model checkpoints and saved models
+checkpoints/
+saved_models/
+models/*.pth
+*.pth
+*.ckpt
+*.pt
+*.h5
+*.hdf5
+*.pb
+
+# Logs
+logs/
+*.log
+*.log.*
+log.txt
+# But keep analysis logs
+!analysis_results/*.txt
+
+# IDE-specific
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.~lock.*
+*.sublime-workspace
+
+# Keep specific visualizations
+!imgs/*.png
+!*/imgs/*.png
